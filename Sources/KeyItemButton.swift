@@ -41,6 +41,9 @@ final public class KeyItemButton: UIControl {
         addTarget(self, action: #selector(touchDown), for: [.touchDown, .touchDragEnter])
         addTarget(self, action: #selector(touchUp), for: [.touchUpInside, .touchDragExit, .touchCancel])
         addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { maker in
+            maker.center.equalTo(snp.center)
+        }
     }
     
     @objc private func touchDown() {
