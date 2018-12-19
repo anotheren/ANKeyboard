@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A072DC3021CA9318003D36E8 /* KeyboardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072DC2F21CA9318003D36E8 /* KeyboardDelegate.swift */; };
+		A072DC3421CA9CEE003D36E8 /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072DC3321CA9CEE003D36E8 /* DeviceHelper.swift */; };
 		A0C1DAB021C3A308004E9627 /* ANKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = A0C1DAAE21C3A308004E9627 /* ANKeyboard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A0C1DAB721C3A3E9004E9627 /* KeyboardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C1DAB621C3A3E9004E9627 /* KeyboardType.swift */; };
 		A0C1DAB921C3A46F004E9627 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C1DAB821C3A46F004E9627 /* Keyboard.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A072DC2F21CA9318003D36E8 /* KeyboardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDelegate.swift; sourceTree = "<group>"; };
+		A072DC3321CA9CEE003D36E8 /* DeviceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
 		A0C1DAAB21C3A308004E9627 /* ANKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ANKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C1DAAE21C3A308004E9627 /* ANKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANKeyboard.h; sourceTree = "<group>"; };
 		A0C1DAAF21C3A308004E9627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +95,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A072DC3121CA9CCB003D36E8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A072DC3321CA9CEE003D36E8 /* DeviceHelper.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		A072DC3221CA9CD2003D36E8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A0C1DABE21C3ADC7004E9627 /* Ex+UIColor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		A0C1DAA121C3A308004E9627 = {
 			isa = PBXGroup;
 			children = (
@@ -120,10 +140,11 @@
 				A0C1DAAF21C3A308004E9627 /* Info.plist */,
 				A0C1DAB621C3A3E9004E9627 /* KeyboardType.swift */,
 				A0C1DAB821C3A46F004E9627 /* Keyboard.swift */,
+				A072DC2F21CA9318003D36E8 /* KeyboardDelegate.swift */,
 				A0F1E1E821CA5F53000B8712 /* IdentityNumberKeyboard.swift */,
 				A0C1DABA21C3A4F4004E9627 /* KeyItemButton.swift */,
-				A0C1DABE21C3ADC7004E9627 /* Ex+UIColor.swift */,
-				A0F1E20D21CA66A4000B8712 /* Util */,
+				A072DC3221CA9CD2003D36E8 /* Extension */,
+				A072DC3121CA9CCB003D36E8 /* Util */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -147,13 +168,6 @@
 				A0F1E1FC21CA6499000B8712 /* Info.plist */,
 			);
 			path = Example;
-			sourceTree = "<group>";
-		};
-		A0F1E20D21CA66A4000B8712 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,7 +311,9 @@
 				A0C1DABB21C3A4F4004E9627 /* KeyItemButton.swift in Sources */,
 				A0C1DAB721C3A3E9004E9627 /* KeyboardType.swift in Sources */,
 				A0F1E1E921CA5F54000B8712 /* IdentityNumberKeyboard.swift in Sources */,
+				A072DC3421CA9CEE003D36E8 /* DeviceHelper.swift in Sources */,
 				A0C1DAB921C3A46F004E9627 /* Keyboard.swift in Sources */,
+				A072DC3021CA9318003D36E8 /* KeyboardDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

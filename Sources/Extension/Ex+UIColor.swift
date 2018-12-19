@@ -20,4 +20,5 @@ extension UIColor {
     static let normalColor = UIColor(hex: 0xFEFFFF)
     static let highlightedColor = UIColor(hex: 0xB6C2D0)
     static let backgroundColor = UIColor(hex: 0xD1D3DA)
+    static let shadowColor = UIColor(hex: 0x848688)
 }

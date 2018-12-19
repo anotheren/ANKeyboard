@@ -13,18 +13,29 @@ public class Keyboard: UIView {
     
     let type: KeyboardType
     
+    public weak var delegate: KeyboardDelegate?
+    
     public init(type: KeyboardType) {
         self.type = type
         switch type {
         case .identityNumber:
             let width = UIScreen.main.bounds.width
-            let frame = CGRect(origin: .zero, size: CGSize(width: width, height: 215))
+            var margin: CGFloat = 0
+            if DeviceHelper.isModernPhone {
+                margin += (44+32)
+            }
+            let frame = CGRect(origin: .zero, size: CGSize(width: width, height: 215+margin))
             super.init(frame: frame)
             let keyboardView = IdentityNumberKeyboard(frame: frame)
-            addSubview(keyboardView)
-            keyboardView.snp.makeConstraints { maker in
-                maker.edges.equalTo(snp.edges)
-            }
+            keyboardView.delegate = self
+            addKeyboardView(keyboardView)
+        }
+    }
+    
+    private func addKeyboardView(_ keyboardView: UIView) {
+        addSubview(keyboardView)
+        keyboardView.snp.makeConstraints { maker in
+            maker.edges.equalTo(snp.edges)
         }
     }
     
@@ -34,5 +45,18 @@ public class Keyboard: UIView {
     
     private func setupView() {
         backgroundColor = UIColor.backgroundColor
+    }
+}
+
+// MARK: - IdentityNumberKeyboardDelegate
+
+extension Keyboard: IdentityNumberKeyboardDelegate {
+    
+    func keyboard(_ keyboard: IdentityNumberKeyboard, didEnter key: String) {
+        delegate?.keyboard(self, didEnter: key)
+    }
+    
+    func keyboardDidDelete(_ keyboard: IdentityNumberKeyboard) {
+        delegate?.keyboardDidDelete(self)
     }
 }

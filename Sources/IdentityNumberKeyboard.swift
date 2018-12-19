@@ -12,6 +12,7 @@ import SnapKit
 protocol IdentityNumberKeyboardDelegate: class {
     
     func keyboard(_ keyboard: IdentityNumberKeyboard, didEnter key: String)
+    func keyboardDidDelete(_ keyboard: IdentityNumberKeyboard)
 }
 
 final class IdentityNumberKeyboard: UIView {
@@ -100,14 +101,15 @@ final class IdentityNumberKeyboard: UIView {
         return view
     }()
     
+    weak var delegate: IdentityNumberKeyboardDelegate?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupView()
+        fatalError("init(coder:) has not been implemented")
     }
     
     private func setupView() {
