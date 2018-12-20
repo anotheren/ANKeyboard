@@ -24,16 +24,10 @@ class ViewController: UIViewController {
 extension ViewController: KeyboardDelegate {
     
     func keyboard(_ keyboard: Keyboard, didEnter key: String) {
-        identityNumberTextField.text?.append(key)
+        identityNumberTextField.insertText(key)
     }
     
     func keyboardDidTapBackspace(_ keyboard: Keyboard) {
-        if let text = identityNumberTextField.text {
-            if text.count > 1 {
-                identityNumberTextField.text = String(text[..<text.index(text.endIndex, offsetBy: -1)])
-            } else {
-                identityNumberTextField.text = ""
-            }
-        }
+        identityNumberTextField.deleteBackward()
     }
 }
