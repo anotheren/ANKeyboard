@@ -221,7 +221,11 @@ final class IdentityNumberKeyboard: UIView {
     
     @objc private func itemButtonTapped(_ sender: NumberKey) {
         SoundHelper.keyboardLetter()
-        delegate?.keyboard(self, didEnter: sender.tag.description)
+        if sender.tag < 10 {
+            delegate?.keyboard(self, didEnter: sender.tag.description)
+        } else {
+            delegate?.keyboard(self, didEnter: "X")
+        }
     }
     
     @objc private func backspaceKeyTapped(_ sender: BackspaceKey) {
