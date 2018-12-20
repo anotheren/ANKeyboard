@@ -10,15 +10,22 @@ import AudioToolbox
 
 struct SoundHelper {
     
-    static func keyboardTink() {
-        AudioServicesPlaySystemSound(1103)
+//    1123——键盘字母按钮按下声音
+//    1155——退格键声音
+//    1156——其他键盘功能键声音
+//    1519——6s peek 震动效果
+//    1520——6s pop 震动效果
+//    1521——6s 三连震 震动效果
+    
+    static func keyboardLetter() {
+        AudioServicesPlaySystemSound(1123)
     }
     
-    static func keyboardTockLow() {
-        AudioServicesPlaySystemSound(1104)
+    static func keyboardBackspace() {
+        AudioServicesPlaySystemSound(1155)
     }
     
-    static func keyboardTockHigh() {
-        AudioServicesPlaySystemSound(1105)
+    static func keyboardOther() {
+        AudioServicesPlaySystemSound(1156)
     }
 }

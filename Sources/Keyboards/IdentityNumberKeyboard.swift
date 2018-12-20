@@ -107,8 +107,7 @@ final class IdentityNumberKeyboard: UIView {
     
     private(set) lazy var deleteButton: BackspaceKey = {
         let view = BackspaceKey(frame: .zero)
-        view.tag = -99
-        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
+        view.addTarget(self, action: #selector(backspaceKeyTapped(_:)), for: .touchUpInside)
         return view
     }()
     
@@ -221,12 +220,12 @@ final class IdentityNumberKeyboard: UIView {
     }
     
     @objc private func itemButtonTapped(_ sender: NumberKey) {
-//        switch sender.tag {
-//            case
-//        }
+        SoundHelper.keyboardLetter()
+        delegate?.keyboard(self, didEnter: sender.tag.description)
     }
     
-    @objc private func backspaceKeyTapped(_ sender: NumberKey) {
-        
+    @objc private func backspaceKeyTapped(_ sender: BackspaceKey) {
+        SoundHelper.keyboardBackspace()
+        delegate?.keyboardDidTapBackspace(self)
     }
 }
