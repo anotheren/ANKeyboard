@@ -140,7 +140,7 @@ final class IdentityNumberKeyboard: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        let keyHeight: CGFloat = 46
+        let keyHeight: CGFloat = 46.5
         let keyMargin: CGFloat = 6
         let keySpacing: CGFloat = 7
         oneButton.snp.makeConstraints { maker in

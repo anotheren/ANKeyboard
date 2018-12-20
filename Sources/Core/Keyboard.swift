@@ -22,9 +22,9 @@ public class Keyboard: UIView {
             let width = UIScreen.main.bounds.width
             var margin: CGFloat = 0
             if DeviceHelper.isModernPhone {
-                margin += (44+32)
+                margin += (44+31)
             }
-            let frame = CGRect(origin: .zero, size: CGSize(width: width, height: 215+margin))
+            let frame = CGRect(origin: .zero, size: CGSize(width: width, height: 216+margin))
             super.init(frame: frame)
             let keyboardView = IdentityNumberKeyboard(frame: frame)
             keyboardView.delegate = self

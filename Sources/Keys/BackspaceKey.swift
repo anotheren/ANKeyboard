@@ -16,6 +16,7 @@ class BackspaceKey: UIControl {
         view.contentMode = .center
         let bundle = Bundle(for: BackspaceKey.self)
         let image = UIImage(named: "Backspace", in: bundle, compatibleWith: nil)
+        view.image = image
         return view
     }()
     
