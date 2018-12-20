@@ -12,7 +12,7 @@
 		A0C1DAB021C3A308004E9627 /* ANKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = A0C1DAAE21C3A308004E9627 /* ANKeyboard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A0C1DAB721C3A3E9004E9627 /* KeyboardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C1DAB621C3A3E9004E9627 /* KeyboardType.swift */; };
 		A0C1DAB921C3A46F004E9627 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C1DAB821C3A46F004E9627 /* Keyboard.swift */; };
-		A0C1DABB21C3A4F4004E9627 /* KeyItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C1DABA21C3A4F4004E9627 /* KeyItemButton.swift */; };
+		A0C1DABB21C3A4F4004E9627 /* NumberKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C1DABA21C3A4F4004E9627 /* NumberKey.swift */; };
 		A0C1DABF21C3ADC7004E9627 /* Ex+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C1DABE21C3ADC7004E9627 /* Ex+UIColor.swift */; };
 		A0C1DAC321C48BCC004E9627 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C1DAC221C48BCC004E9627 /* SnapKit.framework */; };
 		A0F1E1E921CA5F54000B8712 /* IdentityNumberKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F1E1E821CA5F53000B8712 /* IdentityNumberKeyboard.swift */; };
@@ -24,6 +24,9 @@
 		A0F1E20621CA653D000B8712 /* ANKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C1DAAB21C3A308004E9627 /* ANKeyboard.framework */; };
 		A0F1E20721CA653D000B8712 /* ANKeyboard.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0C1DAAB21C3A308004E9627 /* ANKeyboard.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A0F1E20B21CA654E000B8712 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C1DAC221C48BCC004E9627 /* SnapKit.framework */; };
+		A0F1E20F21CB271F000B8712 /* Ex+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F1E20E21CB271F000B8712 /* Ex+Layer.swift */; };
+		A0F1E21221CB2AAD000B8712 /* Keyboard.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0F1E21121CB2AAD000B8712 /* Keyboard.xcassets */; };
+		A0F1E21921CB3A53000B8712 /* BackspaceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F1E21821CB3A53000B8712 /* BackspaceKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +61,7 @@
 		A0C1DAAF21C3A308004E9627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0C1DAB621C3A3E9004E9627 /* KeyboardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardType.swift; sourceTree = "<group>"; };
 		A0C1DAB821C3A46F004E9627 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
-		A0C1DABA21C3A4F4004E9627 /* KeyItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyItemButton.swift; sourceTree = "<group>"; };
+		A0C1DABA21C3A4F4004E9627 /* NumberKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberKey.swift; sourceTree = "<group>"; };
 		A0C1DABC21C3A544004E9627 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A0C1DABD21C3A544004E9627 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A0C1DABE21C3ADC7004E9627 /* Ex+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UIColor.swift"; sourceTree = "<group>"; };
@@ -72,6 +75,9 @@
 		A0F1E1F721CA6499000B8712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0F1E1FA21CA6499000B8712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0F1E1FC21CA6499000B8712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0F1E20E21CB271F000B8712 /* Ex+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+Layer.swift"; sourceTree = "<group>"; };
+		A0F1E21121CB2AAD000B8712 /* Keyboard.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Keyboard.xcassets; sourceTree = "<group>"; };
+		A0F1E21821CB3A53000B8712 /* BackspaceKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackspaceKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				A0C1DABE21C3ADC7004E9627 /* Ex+UIColor.swift */,
+				A0F1E20E21CB271F000B8712 /* Ex+Layer.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -138,13 +145,12 @@
 			children = (
 				A0C1DAAE21C3A308004E9627 /* ANKeyboard.h */,
 				A0C1DAAF21C3A308004E9627 /* Info.plist */,
-				A0C1DAB621C3A3E9004E9627 /* KeyboardType.swift */,
-				A0C1DAB821C3A46F004E9627 /* Keyboard.swift */,
-				A072DC2F21CA9318003D36E8 /* KeyboardDelegate.swift */,
-				A0F1E1E821CA5F53000B8712 /* IdentityNumberKeyboard.swift */,
-				A0C1DABA21C3A4F4004E9627 /* KeyItemButton.swift */,
+				A0F1E21721CB34B7000B8712 /* Core */,
+				A0F1E21521CB349D000B8712 /* Keyboards */,
+				A0F1E21621CB34A8000B8712 /* Keys */,
 				A072DC3221CA9CD2003D36E8 /* Extension */,
 				A072DC3121CA9CCB003D36E8 /* Util */,
+				A0F1E21121CB2AAD000B8712 /* Keyboard.xcassets */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -168,6 +174,33 @@
 				A0F1E1FC21CA6499000B8712 /* Info.plist */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		A0F1E21521CB349D000B8712 /* Keyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A0F1E1E821CA5F53000B8712 /* IdentityNumberKeyboard.swift */,
+			);
+			path = Keyboards;
+			sourceTree = "<group>";
+		};
+		A0F1E21621CB34A8000B8712 /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				A0C1DABA21C3A4F4004E9627 /* NumberKey.swift */,
+				A0F1E21821CB3A53000B8712 /* BackspaceKey.swift */,
+			);
+			path = Keys;
+			sourceTree = "<group>";
+		};
+		A0F1E21721CB34B7000B8712 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A0C1DAB821C3A46F004E9627 /* Keyboard.swift */,
+				A0C1DAB621C3A3E9004E9627 /* KeyboardType.swift */,
+				A072DC2F21CA9318003D36E8 /* KeyboardDelegate.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0F1E21221CB2AAD000B8712 /* Keyboard.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,11 +342,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0C1DABF21C3ADC7004E9627 /* Ex+UIColor.swift in Sources */,
-				A0C1DABB21C3A4F4004E9627 /* KeyItemButton.swift in Sources */,
+				A0F1E21921CB3A53000B8712 /* BackspaceKey.swift in Sources */,
+				A0C1DABB21C3A4F4004E9627 /* NumberKey.swift in Sources */,
 				A0C1DAB721C3A3E9004E9627 /* KeyboardType.swift in Sources */,
 				A0F1E1E921CA5F54000B8712 /* IdentityNumberKeyboard.swift in Sources */,
 				A072DC3421CA9CEE003D36E8 /* DeviceHelper.swift in Sources */,
 				A0C1DAB921C3A46F004E9627 /* Keyboard.swift in Sources */,
+				A0F1E20F21CB271F000B8712 /* Ex+Layer.swift in Sources */,
 				A072DC3021CA9318003D36E8 /* KeyboardDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

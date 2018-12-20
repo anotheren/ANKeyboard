@@ -12,92 +12,103 @@ import SnapKit
 protocol IdentityNumberKeyboardDelegate: class {
     
     func keyboard(_ keyboard: IdentityNumberKeyboard, didEnter key: String)
-    func keyboardDidDelete(_ keyboard: IdentityNumberKeyboard)
+    func keyboardDidTapBackspace(_ keyboard: IdentityNumberKeyboard)
 }
 
 final class IdentityNumberKeyboard: UIView {
     
-    private(set) lazy var zeroButton: KeyItemButton = {
-        let view = KeyItemButton(frame: .zero)
+    private(set) lazy var zeroButton: NumberKey = {
+        let view = NumberKey(frame: .zero)
         view.title = "0"
         view.tag = 0
+        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
     
-    private(set) lazy var oneButton: KeyItemButton = {
-        let view = KeyItemButton(frame: .zero)
+    private(set) lazy var oneButton: NumberKey = {
+        let view = NumberKey(frame: .zero)
         view.title = "1"
         view.tag = 1
+        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
     
-    private(set) lazy var twoButton: KeyItemButton = {
-        let view = KeyItemButton(frame: .zero)
+    private(set) lazy var twoButton: NumberKey = {
+        let view = NumberKey(frame: .zero)
         view.title = "2"
         view.tag = 2
+        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
     
-    private(set) lazy var threeButton: KeyItemButton = {
-        let view = KeyItemButton(frame: .zero)
+    private(set) lazy var threeButton: NumberKey = {
+        let view = NumberKey(frame: .zero)
         view.title = "3"
         view.tag = 3
+        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
     
-    private(set) lazy var fourButton: KeyItemButton = {
-        let view = KeyItemButton(frame: .zero)
+    private(set) lazy var fourButton: NumberKey = {
+        let view = NumberKey(frame: .zero)
         view.title = "4"
         view.tag = 4
+        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
     
-    private(set) lazy var fiveButton: KeyItemButton = {
-        let view = KeyItemButton(frame: .zero)
+    private(set) lazy var fiveButton: NumberKey = {
+        let view = NumberKey(frame: .zero)
         view.title = "5"
         view.tag = 5
+        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
     
-    private(set) lazy var sixButton: KeyItemButton = {
-        let view = KeyItemButton(frame: .zero)
+    private(set) lazy var sixButton: NumberKey = {
+        let view = NumberKey(frame: .zero)
         view.title = "6"
         view.tag = 6
+        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
     
-    private(set) lazy var sevenButton: KeyItemButton = {
-        let view = KeyItemButton(frame: .zero)
+    private(set) lazy var sevenButton: NumberKey = {
+        let view = NumberKey(frame: .zero)
         view.title = "7"
         view.tag = 7
+        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
     
-    private(set) lazy var eightButton: KeyItemButton = {
-        let view = KeyItemButton(frame: .zero)
+    private(set) lazy var eightButton: NumberKey = {
+        let view = NumberKey(frame: .zero)
         view.title = "8"
         view.tag = 8
+        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
     
-    private(set) lazy var nineButton: KeyItemButton = {
-        let view = KeyItemButton(frame: .zero)
+    private(set) lazy var nineButton: NumberKey = {
+        let view = NumberKey(frame: .zero)
         view.title = "9"
         view.tag = 9
+        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
     
-    private(set) lazy var xButton: KeyItemButton = {
-        let view = KeyItemButton(frame: .zero)
+    private(set) lazy var xButton: NumberKey = {
+        let view = NumberKey(frame: .zero)
         view.title = "X"
         view.tag = 10
+        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
     
-    private(set) lazy var deleteButton: KeyItemButton = {
-        let view = KeyItemButton(frame: .zero)
-        view.title = "X"
-        view.tag = 10
+    private(set) lazy var deleteButton: BackspaceKey = {
+        let view = BackspaceKey(frame: .zero)
+        view.tag = -99
+        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
     
@@ -207,5 +218,15 @@ final class IdentityNumberKeyboard: UIView {
             maker.height.equalTo(keyHeight)
             maker.width.equalTo(oneButton.snp.width)
         }
+    }
+    
+    @objc private func itemButtonTapped(_ sender: NumberKey) {
+//        switch sender.tag {
+//            case
+//        }
+    }
+    
+    @objc private func backspaceKeyTapped(_ sender: NumberKey) {
+        
     }
 }

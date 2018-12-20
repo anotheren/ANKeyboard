@@ -18,25 +18,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="身份证" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaU-L5-uiD">
-                                <rect key="frame" x="25" y="83.666666666666671" width="52" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="62K-pI-GP7">
                                 <rect key="frame" x="97" y="79" width="292" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="身份证" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaU-L5-uiD">
+                                <rect key="frame" x="25" y="83.666666666666671" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自带数字键盘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JL9-Xm-dvr">
+                                <rect key="frame" x="25" y="137.66666666666666" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ghh-QN-gG8">
+                                <rect key="frame" x="149" y="133" width="240" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ghh-QN-gG8" firstAttribute="leading" secondItem="JL9-Xm-dvr" secondAttribute="trailing" constant="20" id="8yi-QD-Nlj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="62K-pI-GP7" secondAttribute="trailing" constant="25" id="Cvu-Zh-Eeg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ghh-QN-gG8" secondAttribute="trailing" constant="25" id="F9H-Ha-Ybv"/>
+                            <constraint firstItem="ghh-QN-gG8" firstAttribute="top" secondItem="62K-pI-GP7" secondAttribute="bottom" constant="24" id="Lhl-7H-1V3"/>
                             <constraint firstItem="62K-pI-GP7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="Twd-8L-dpB"/>
                             <constraint firstItem="62K-pI-GP7" firstAttribute="leading" secondItem="MaU-L5-uiD" secondAttribute="trailing" constant="20" id="at1-Es-jSP"/>
+                            <constraint firstItem="JL9-Xm-dvr" firstAttribute="centerY" secondItem="ghh-QN-gG8" secondAttribute="centerY" id="bGz-Hl-jZB"/>
                             <constraint firstItem="MaU-L5-uiD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="eip-Qz-Nsf"/>
+                            <constraint firstItem="JL9-Xm-dvr" firstAttribute="leading" secondItem="MaU-L5-uiD" secondAttribute="leading" id="mGN-gH-uGW"/>
                             <constraint firstItem="MaU-L5-uiD" firstAttribute="centerY" secondItem="62K-pI-GP7" secondAttribute="centerY" id="tWQ-en-GpF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

@@ -1,5 +1,5 @@
 //
-//  KeyItemButton.swift
+//  NumberKey.swift
 //  ANKeyboard
 //
 //  Created by 刘栋 on 2018/12/14.
@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SnapKit
 
-final public class KeyItemButton: UIControl {
+final class NumberKey: UIControl {
     
     private var animator = UIViewPropertyAnimator()
     
@@ -26,12 +27,12 @@ final public class KeyItemButton: UIControl {
         }
     }
     
-    public override init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
     }
     
-    public required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupView()
     }
@@ -44,6 +45,8 @@ final public class KeyItemButton: UIControl {
         titleLabel.snp.makeConstraints { maker in
             maker.center.equalTo(snp.center)
         }
+        layer.cornerRadius = 5
+        layer.applySketchShadow(color: UIColor.black, alpha: 0.35, x: 0, y: 1, blur: 0, spread: 0)
     }
     
     @objc private func touchDown() {

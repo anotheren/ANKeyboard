@@ -11,7 +11,7 @@ import Foundation
 public protocol KeyboardDelegate: class {
     
     func keyboard(_ keyboard: Keyboard, didEnter key: String)
-    func keyboardDidDelete(_ keyboard: Keyboard)
+    func keyboardDidTapBackspace(_ keyboard: Keyboard)
 }
 
 extension KeyboardDelegate {
@@ -20,7 +20,7 @@ extension KeyboardDelegate {
         
     }
     
-    public func keyboardDidDelete(_ keyboard: Keyboard) {
+    public func keyboardDidTapBackspace(_ keyboard: Keyboard) {
         
     }
 }

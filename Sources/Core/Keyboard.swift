@@ -11,7 +11,7 @@ import SnapKit
 
 public class Keyboard: UIView {
     
-    let type: KeyboardType
+    public let type: KeyboardType
     
     public weak var delegate: KeyboardDelegate?
     
@@ -56,7 +56,7 @@ extension Keyboard: IdentityNumberKeyboardDelegate {
         delegate?.keyboard(self, didEnter: key)
     }
     
-    func keyboardDidDelete(_ keyboard: IdentityNumberKeyboard) {
-        delegate?.keyboardDidDelete(self)
+    func keyboardDidTapBackspace(_ keyboard: IdentityNumberKeyboard) {
+        delegate?.keyboardDidTapBackspace(self)
     }
 }
