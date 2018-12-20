@@ -27,6 +27,7 @@
 		A0F1E20F21CB271F000B8712 /* Ex+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F1E20E21CB271F000B8712 /* Ex+Layer.swift */; };
 		A0F1E21221CB2AAD000B8712 /* Keyboard.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0F1E21121CB2AAD000B8712 /* Keyboard.xcassets */; };
 		A0F1E21921CB3A53000B8712 /* BackspaceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F1E21821CB3A53000B8712 /* BackspaceKey.swift */; };
+		A0F1E21B21CB5A23000B8712 /* SoundHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F1E21A21CB5A23000B8712 /* SoundHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		A0F1E20E21CB271F000B8712 /* Ex+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+Layer.swift"; sourceTree = "<group>"; };
 		A0F1E21121CB2AAD000B8712 /* Keyboard.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Keyboard.xcassets; sourceTree = "<group>"; };
 		A0F1E21821CB3A53000B8712 /* BackspaceKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackspaceKey.swift; sourceTree = "<group>"; };
+		A0F1E21A21CB5A23000B8712 /* SoundHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				A072DC3321CA9CEE003D36E8 /* DeviceHelper.swift */,
+				A0F1E21A21CB5A23000B8712 /* SoundHelper.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0C1DABF21C3ADC7004E9627 /* Ex+UIColor.swift in Sources */,
+				A0F1E21B21CB5A23000B8712 /* SoundHelper.swift in Sources */,
 				A0F1E21921CB3A53000B8712 /* BackspaceKey.swift in Sources */,
 				A0C1DABB21C3A4F4004E9627 /* NumberKey.swift in Sources */,
 				A0C1DAB721C3A3E9004E9627 /* KeyboardType.swift in Sources */,
