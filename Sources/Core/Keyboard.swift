@@ -11,12 +11,15 @@ import SnapKit
 
 public class Keyboard: UIView {
     
+    /// 键盘类型
     public let type: KeyboardType
-    
+    /// 键盘代理，并手动控制输入
     public weak var delegate: KeyboardDelegate?
-    
+    /// 当前绑定类型
     public private(set) var bindType: BindType = .none
+    /// 当前绑定的 UITextField
     public private(set) weak var textField: UITextField?
+    /// 当前绑定的 UITextView
     public private(set) weak var textView: UITextView?
     
     public init(type: KeyboardType) {
@@ -51,6 +54,7 @@ public class Keyboard: UIView {
         backgroundColor = UIColor.backgroundColor
     }
     
+    /// 绑定一个 UITextField，并自动控制输入
     public func bind(to textField: UITextField) {
         bindType = .textFiled
         textField.inputView = self
@@ -58,6 +62,7 @@ public class Keyboard: UIView {
         self.textView = nil
     }
     
+    /// 绑定一个 UITextView，并自动控制输入
     public func bind(to textView: UITextView) {
         bindType = .textView
         textView.inputView = self
@@ -65,6 +70,7 @@ public class Keyboard: UIView {
         self.textField = nil
     }
     
+    /// 移除所有绑定的输入源
     public func removeAllTextInput() {
         bindType = .none
         self.textField = nil
