@@ -15,6 +15,8 @@ public class Keyboard: UIView {
     
     public weak var delegate: KeyboardDelegate?
     
+    public private(set) weak var textField: UITextField?
+    
     public init(type: KeyboardType) {
         self.type = type
         switch type {
@@ -46,6 +48,10 @@ public class Keyboard: UIView {
     private func setupView() {
         backgroundColor = UIColor.backgroundColor
     }
+    
+    public func add(textField: UITextField) {
+        self.textField = textField
+    }
 }
 
 // MARK: - IdentityNumberKeyboardDelegate
@@ -54,9 +60,11 @@ extension Keyboard: IdentityNumberKeyboardDelegate {
     
     func keyboard(_ keyboard: IdentityNumberKeyboard, didEnter key: String) {
         delegate?.keyboard(self, didEnter: key)
+        textField?.text?.append(key)
     }
     
     func keyboardDidTapBackspace(_ keyboard: IdentityNumberKeyboard) {
         delegate?.keyboardDidTapBackspace(self)
+        textField?.text?.removeLast()
     }
 }
