@@ -80,36 +80,3 @@ extension Keyboard {
         case textView
     }
 }
-
-// MARK: - IdentityNumberKeyboardDelegate
-
-extension Keyboard: IdentityNumberKeyboardDelegate {
-    
-    func keyboard(_ keyboard: IdentityNumberKeyboard, didEnter key: String) {
-        delegate?.keyboard(self, didEnter: key)
-        switch bindType {
-        case .textFiled:
-            textField?.text?.append(key)
-        case .textView:
-            textView?.text.append(key)
-        default:
-            break
-        }
-    }
-    
-    func keyboardDidTapBackspace(_ keyboard: IdentityNumberKeyboard) {
-        delegate?.keyboardDidTapBackspace(self)
-        switch bindType {
-        case .textFiled:
-            if let text = textField?.text, !text.isEmpty {
-                textField?.text?.removeLast()
-            }
-        case .textView:
-            if let text = textView?.text, !text.isEmpty {
-                textView?.text?.removeLast()
-            }
-        default:
-            break
-        }
-    }
-}
