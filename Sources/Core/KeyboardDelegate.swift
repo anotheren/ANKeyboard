@@ -14,13 +14,8 @@ public protocol KeyboardDelegate: class {
     func keyboardDidTapBackspace(_ keyboard: Keyboard)
 }
 
-extension KeyboardDelegate {
+public extension KeyboardDelegate {
     
-    public func keyboard(_ keyboard: Keyboard, didEnter key: String) {
-        
-    }
-    
-    public func keyboardDidTapBackspace(_ keyboard: Keyboard) {
-        
-    }
+    func keyboard(_ keyboard: Keyboard, didEnter key: String) { }
+    func keyboardDidTapBackspace(_ keyboard: Keyboard) { }
 }
