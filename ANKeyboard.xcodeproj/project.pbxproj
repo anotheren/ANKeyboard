@@ -17,7 +17,7 @@
 		A0C1DAC321C48BCC004E9627 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C1DAC221C48BCC004E9627 /* SnapKit.framework */; };
 		A0F1E1E921CA5F54000B8712 /* IdentityNumberKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F1E1E821CA5F53000B8712 /* IdentityNumberKeyboard.swift */; };
 		A0F1E1F121CA6497000B8712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F1E1F021CA6497000B8712 /* AppDelegate.swift */; };
-		A0F1E1F321CA6497000B8712 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F1E1F221CA6497000B8712 /* ViewController.swift */; };
+		A0F1E1F321CA6497000B8712 /* IdentityNumberKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F1E1F221CA6497000B8712 /* IdentityNumberKeyboardViewController.swift */; };
 		A0F1E1F621CA6497000B8712 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F1E1F421CA6497000B8712 /* Main.storyboard */; };
 		A0F1E1F821CA6499000B8712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0F1E1F721CA6499000B8712 /* Assets.xcassets */; };
 		A0F1E1FB21CA6499000B8712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F1E1F921CA6499000B8712 /* LaunchScreen.storyboard */; };
@@ -71,7 +71,7 @@
 		A0F1E1E821CA5F53000B8712 /* IdentityNumberKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityNumberKeyboard.swift; sourceTree = "<group>"; };
 		A0F1E1EE21CA6497000B8712 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F1E1F021CA6497000B8712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A0F1E1F221CA6497000B8712 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A0F1E1F221CA6497000B8712 /* IdentityNumberKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityNumberKeyboardViewController.swift; sourceTree = "<group>"; };
 		A0F1E1F521CA6497000B8712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0F1E1F721CA6499000B8712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0F1E1FA21CA6499000B8712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				A0F1E1F021CA6497000B8712 /* AppDelegate.swift */,
-				A0F1E1F221CA6497000B8712 /* ViewController.swift */,
+				A0F1E1F221CA6497000B8712 /* IdentityNumberKeyboardViewController.swift */,
 				A0F1E1F421CA6497000B8712 /* Main.storyboard */,
 				A0F1E1F721CA6499000B8712 /* Assets.xcassets */,
 				A0F1E1F921CA6499000B8712 /* LaunchScreen.storyboard */,
@@ -362,7 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0F1E1F321CA6497000B8712 /* ViewController.swift in Sources */,
+				A0F1E1F321CA6497000B8712 /* IdentityNumberKeyboardViewController.swift in Sources */,
 				A0F1E1F121CA6497000B8712 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

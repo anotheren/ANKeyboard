@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  IdentityNumberKeyboardViewController.swift
 //  Example
 //
 //  Created by 刘栋 on 2018/12/19.
@@ -9,19 +9,18 @@
 import UIKit
 import ANKeyboard
 
-class ViewController: UIViewController {
+class IdentityNumberKeyboardViewController: UIViewController {
 
     @IBOutlet weak var identityNumberTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let keyboard = Keyboard(type: .identityNumber)
-        keyboard.delegate = self
-        identityNumberTextField.inputView = keyboard
+        keyboard.bind(to: identityNumberTextField)
     }
 }
-
-extension ViewController: KeyboardDelegate {
+/*
+extension IdentityNumberKeyboardViewController: KeyboardDelegate {
     
     func keyboard(_ keyboard: Keyboard, didEnter key: String) {
         identityNumberTextField.insertText(key)
@@ -31,3 +30,4 @@ extension ViewController: KeyboardDelegate {
         identityNumberTextField.deleteBackward()
     }
 }
+*/
