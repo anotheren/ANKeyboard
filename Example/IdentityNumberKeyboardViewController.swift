@@ -15,8 +15,15 @@ class IdentityNumberKeyboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        identityNumberTextField.addTarget(self, action: #selector(editingChanged(_:)), for: .editingChanged)
         let keyboard = Keyboard(type: .identityNumber)
         keyboard.bind(to: identityNumberTextField)
+    }
+    
+    @objc private func editingChanged(_ sender: UITextField) {
+        if let text = sender.text {
+            print(text)
+        }
     }
 }
 /*
