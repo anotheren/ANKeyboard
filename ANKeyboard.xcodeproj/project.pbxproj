@@ -16,6 +16,7 @@
 		A09D7EFA2293DA9800DF3566 /* VehicleIdentificationNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7EF92293DA9800DF3566 /* VehicleIdentificationNumberViewController.swift */; };
 		A09D7EFC2293E87400DF3566 /* FunctionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7EFB2293E87400DF3566 /* FunctionKey.swift */; };
 		A0B398002293EF360059E1EF /* Keyboard+VehicleIdentificationNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B397FF2293EF360059E1EF /* Keyboard+VehicleIdentificationNumber.swift */; };
+		A0B398042294027B0059E1EF /* ReturnKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B398032294027B0059E1EF /* ReturnKey.swift */; };
 		A0C1DAB021C3A308004E9627 /* ANKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = A0C1DAAE21C3A308004E9627 /* ANKeyboard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A0C1DAB721C3A3E9004E9627 /* KeyboardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C1DAB621C3A3E9004E9627 /* KeyboardType.swift */; };
 		A0C1DAB921C3A46F004E9627 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C1DAB821C3A46F004E9627 /* Keyboard.swift */; };
@@ -71,6 +72,7 @@
 		A09D7EF92293DA9800DF3566 /* VehicleIdentificationNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleIdentificationNumberViewController.swift; sourceTree = "<group>"; };
 		A09D7EFB2293E87400DF3566 /* FunctionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionKey.swift; sourceTree = "<group>"; };
 		A0B397FF2293EF360059E1EF /* Keyboard+VehicleIdentificationNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+VehicleIdentificationNumber.swift"; sourceTree = "<group>"; };
+		A0B398032294027B0059E1EF /* ReturnKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnKey.swift; sourceTree = "<group>"; };
 		A0C1DAAB21C3A308004E9627 /* ANKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ANKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C1DAAE21C3A308004E9627 /* ANKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANKeyboard.h; sourceTree = "<group>"; };
 		A0C1DAAF21C3A308004E9627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				A0F1E21821CB3A53000B8712 /* BackspaceKey.swift */,
 				A09D7EF52293BDC500DF3566 /* LetterKey.swift */,
 				A09D7EFB2293E87400DF3566 /* FunctionKey.swift */,
+				A0B398032294027B0059E1EF /* ReturnKey.swift */,
 			);
 			path = Keys;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				A09D7EF62293BDC500DF3566 /* LetterKey.swift in Sources */,
 				A072DC3421CA9CEE003D36E8 /* DeviceHelper.swift in Sources */,
 				A0C1DAB921C3A46F004E9627 /* Keyboard.swift in Sources */,
+				A0B398042294027B0059E1EF /* ReturnKey.swift in Sources */,
 				A09D7EFC2293E87400DF3566 /* FunctionKey.swift in Sources */,
 				A0C4ECA722618EA500BCB58C /* Keyboard+IdentityCardNumber.swift in Sources */,
 				A09D7EF42293AB7600DF3566 /* VehicleIdentificationNumberKeyboard.swift in Sources */,

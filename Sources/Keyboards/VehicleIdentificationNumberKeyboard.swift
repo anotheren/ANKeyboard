@@ -21,6 +21,16 @@ final class VehicleIdentificationNumberKeyboard: UIView {
     
     weak var delegate: VehicleIdentificationNumberKeyboardDelegate?
     
+    override var tintColor: UIColor! {
+        didSet {
+            for view in subviews {
+                if view is ReturnKey {
+                    view.backgroundColor = tintColor
+                }
+            }
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -192,6 +202,24 @@ final class VehicleIdentificationNumberKeyboard: UIView {
             maker.top.equalTo(line4.snp.top)
             maker.bottom.equalTo(line4.snp.bottom)
         }
+        
+        let returnKey = ReturnKey(type: .custom)
+        var attributes = [NSAttributedString.Key: Any]()
+        attributes[.font] = UIFont.systemFont(ofSize: 16, weight: .regular)
+        attributes[.foregroundColor] = UIColor.white
+        let title = NSAttributedString(string: "完成", attributes: attributes)
+        returnKey.setAttributedTitle(title, for: .normal)
+        returnKey.layer.cornerRadius = 4
+        returnKey.layer.masksToBounds = true
+        returnKey.addTarget(self, action: #selector(returnKeyTapped(_:)), for: .touchUpInside)
+        returnKey.tintColor = tintColor
+        addSubview(returnKey)
+        returnKey.snp.makeConstraints { maker in
+            maker.top.equalTo(line4.snp.bottom).offset(horizontalMargin)
+            maker.left.equalTo(pasteKey.snp.left)
+            maker.right.equalTo(deleteKey.snp.right)
+            maker.height.equalTo(48)
+        }
     }
     
     @objc private func letterKeyTapped(_ sender: LetterKey) {
@@ -208,5 +236,10 @@ final class VehicleIdentificationNumberKeyboard: UIView {
     @objc private func deleteKeyTapped(_ sender: FunctionKey) {
         SoundHelper.keyboardBackspace()
         delegate?.keyboardDidTapBackspace(self)
+    }
+    
+    @objc private func returnKeyTapped(_ sender: UIButton) {
+        SoundHelper.keyboardOther()
+        delegate?.keyboardDidTapReturn(self)
     }
 }
