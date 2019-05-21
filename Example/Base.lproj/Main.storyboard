@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Identity Number Keyboard View Controller-->
+        <!--Identity Card Number View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="IdentityNumberKeyboardViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="IdentityCardNumberViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,12 +58,68 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="identityNumberTextField" destination="62K-pI-GP7" id="cus-PN-gfX"/>
+                        <outlet property="identityCardNumberTextField" destination="62K-pI-GP7" id="cus-PN-gfX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2010.144927536232" y="125.89285714285714"/>
+            <point key="canvasLocation" x="2348" y="42"/>
+        </scene>
+        <!--Vehicle Identification Number View Controller-->
+        <scene sceneID="9UW-Hb-DAa">
+            <objects>
+                <viewController id="8dB-7C-P3T" customClass="VehicleIdentificationNumberViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aZd-ak-NNL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ben-yC-4ke">
+                                <rect key="frame" x="132" y="123" width="257" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车辆识别码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FE-Lt-B3r">
+                                <rect key="frame" x="25" y="127.66666666666669" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自带键盘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1b-gd-ma5">
+                                <rect key="frame" x="25" y="187.66666666666666" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eUU-ne-9cq">
+                                <rect key="frame" x="115" y="183" width="274" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5FE-Lt-B3r" firstAttribute="centerY" secondItem="ben-yC-4ke" secondAttribute="centerY" id="0Jm-54-BQ2"/>
+                            <constraint firstItem="J1b-gd-ma5" firstAttribute="leading" secondItem="iEQ-9i-PYZ" secondAttribute="leading" constant="25" id="0ka-Pk-uCQ"/>
+                            <constraint firstItem="iEQ-9i-PYZ" firstAttribute="trailing" secondItem="ben-yC-4ke" secondAttribute="trailing" constant="25" id="4Lo-E7-E3I"/>
+                            <constraint firstItem="5FE-Lt-B3r" firstAttribute="leading" secondItem="iEQ-9i-PYZ" secondAttribute="leading" constant="25" id="ECl-X1-YQk"/>
+                            <constraint firstItem="ben-yC-4ke" firstAttribute="leading" secondItem="5FE-Lt-B3r" secondAttribute="trailing" constant="20" id="FQk-1k-2e4"/>
+                            <constraint firstItem="iEQ-9i-PYZ" firstAttribute="trailing" secondItem="eUU-ne-9cq" secondAttribute="trailing" constant="25" id="Mf3-5c-cjy"/>
+                            <constraint firstItem="eUU-ne-9cq" firstAttribute="centerY" secondItem="J1b-gd-ma5" secondAttribute="centerY" id="epk-8A-j7W"/>
+                            <constraint firstItem="ben-yC-4ke" firstAttribute="top" secondItem="iEQ-9i-PYZ" secondAttribute="top" constant="35" id="fL8-aT-4UG"/>
+                            <constraint firstItem="eUU-ne-9cq" firstAttribute="leading" secondItem="J1b-gd-ma5" secondAttribute="trailing" constant="20" id="fkL-CB-pj9"/>
+                            <constraint firstItem="eUU-ne-9cq" firstAttribute="top" secondItem="ben-yC-4ke" secondAttribute="bottom" constant="30" id="r99-nT-8Lq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iEQ-9i-PYZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="vehicleIdentificationNumberTextField" destination="ben-yC-4ke" id="xje-6q-vCD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bf0-cV-Sl3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2348" y="712"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GIE-AR-lhR">
@@ -74,10 +130,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="uqs-cf-7ON">
-                                <rect key="frame" x="158.66666666666666" y="403" width="97" height="90"/>
+                                <rect key="frame" x="143" y="403" width="128" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0a-Jy-IFR">
-                                        <rect key="frame" x="0.0" y="0.0" width="97" height="38"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="38"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                         <state key="normal" title="身份证键盘"/>
                                         <connections>
@@ -85,9 +141,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxo-5G-aUZ">
-                                        <rect key="frame" x="0.0" y="52" width="97" height="38"/>
+                                        <rect key="frame" x="0.0" y="52" width="128" height="38"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                        <state key="normal" title="其他键盘"/>
+                                        <state key="normal" title="车辆识别码键盘"/>
+                                        <connections>
+                                            <segue destination="8dB-7C-P3T" kind="show" id="cGN-C2-ecM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

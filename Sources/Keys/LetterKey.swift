@@ -1,29 +1,40 @@
 //
-//  NumberKey.swift
+//  LetterKey.swift
 //  ANKeyboard
 //
-//  Created by 刘栋 on 2018/12/14.
-//  Copyright © 2018 anotheren.com. All rights reserved.
+//  Created by 刘栋 on 2019/5/21.
+//  Copyright © 2019 anotheren.com. All rights reserved.
 //
 
 import UIKit
-import SnapKit
 
-final class NumberKey: UIControl {
+final class LetterKey: UIControl {
     
     private var animator = UIViewPropertyAnimator()
     
     private lazy var titleLabel: UILabel = {
         let view = UILabel(frame: .zero)
-        view.font = UIFont.systemFont(ofSize: 25, weight: .regular)
+        view.font = UIFont.systemFont(ofSize: Adaptor.phone(15, 16, 17), weight: .regular)
         view.textColor = UIColor(hex: 0x39362C)
         view.textAlignment = .center
         return view
     }()
     
-    public var title: String? {
+    var title: String? {
         didSet {
             titleLabel.text = title
+        }
+    }
+    
+    override var isEnabled: Bool {
+        didSet {
+            if isEnabled {
+                titleLabel.textColor = .normalTextColor
+                backgroundColor = .normalKeyColor
+            } else {
+                titleLabel.textColor = .disableTextColor
+                backgroundColor = .disableKeyColor
+            }
         }
     }
     
@@ -45,8 +56,7 @@ final class NumberKey: UIControl {
         titleLabel.snp.makeConstraints { maker in
             maker.center.equalTo(snp.center)
         }
-        layer.cornerRadius = 5
-        layer.applySketchShadow(color: UIColor.black, alpha: 0.35, x: 0, y: 1, blur: 0, spread: 0)
+        layer.cornerRadius = 4
     }
     
     @objc private func touchDown() {

@@ -20,7 +20,6 @@ final class IdentityCardNumberKeyboard: UIView {
     private(set) lazy var key_0: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "0"
-        view.tag = 0
         view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
@@ -28,7 +27,6 @@ final class IdentityCardNumberKeyboard: UIView {
     private(set) lazy var key_1: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "1"
-        view.tag = 1
         view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
@@ -36,7 +34,6 @@ final class IdentityCardNumberKeyboard: UIView {
     private(set) lazy var key_2: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "2"
-        view.tag = 2
         view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
@@ -44,7 +41,6 @@ final class IdentityCardNumberKeyboard: UIView {
     private(set) lazy var key_3: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "3"
-        view.tag = 3
         view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
@@ -52,7 +48,6 @@ final class IdentityCardNumberKeyboard: UIView {
     private(set) lazy var key_4: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "4"
-        view.tag = 4
         view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
@@ -60,7 +55,6 @@ final class IdentityCardNumberKeyboard: UIView {
     private(set) lazy var key_5: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "5"
-        view.tag = 5
         view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
@@ -68,7 +62,6 @@ final class IdentityCardNumberKeyboard: UIView {
     private(set) lazy var key_6: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "6"
-        view.tag = 6
         view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
@@ -76,7 +69,6 @@ final class IdentityCardNumberKeyboard: UIView {
     private(set) lazy var key_7: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "7"
-        view.tag = 7
         view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
@@ -84,7 +76,6 @@ final class IdentityCardNumberKeyboard: UIView {
     private(set) lazy var key_8: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "8"
-        view.tag = 8
         view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
@@ -92,7 +83,6 @@ final class IdentityCardNumberKeyboard: UIView {
     private(set) lazy var key_9: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "9"
-        view.tag = 9
         view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
@@ -100,7 +90,6 @@ final class IdentityCardNumberKeyboard: UIView {
     private(set) lazy var key_X: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "X"
-        view.tag = 10
         view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
         return view
     }()
@@ -220,12 +209,9 @@ final class IdentityCardNumberKeyboard: UIView {
     }
     
     @objc private func itemButtonTapped(_ sender: NumberKey) {
+        guard let key = sender.title else { return }
         SoundHelper.keyboardLetter()
-        if sender.tag < 10 {
-            delegate?.keyboard(self, didEnter: sender.tag.description)
-        } else {
-            delegate?.keyboard(self, didEnter: "X")
-        }
+        delegate?.keyboard(self, didEnter: key)
     }
     
     @objc private func backspaceKeyTapped(_ sender: BackspaceKey) {

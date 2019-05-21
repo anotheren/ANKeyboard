@@ -17,8 +17,13 @@ extension UIColor {
         self.init(red: r, green: g, blue: b, alpha: alpha)
     }
     
-    static let normalColor = UIColor(hex: 0xFEFFFF)
-    static let highlightedColor = UIColor(hex: 0xB6C2D0)
-    static let backgroundColor = UIColor(hex: 0xD1D3DA)
+    static let normalTextColor = UIColor(hex: 0x39362C)
+    static let disableTextColor = UIColor(hex: 0xCECECE)
+    
+    static let normalKeyColor = UIColor(hex: 0xFEFFFF)
+    static let disableKeyColor = UIColor(hex: 0xF9F9F9)
+    static let highlightedKeyColor = UIColor(hex: 0xB6C2D0)
+    
+    static let backgroundColor = UIColor(hex: 0xEAEAEA)
     static let shadowColor = UIColor(hex: 0x848688)
 }

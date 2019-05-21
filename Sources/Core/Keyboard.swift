@@ -24,20 +24,28 @@ public class Keyboard: UIView {
     
     public init(type: KeyboardType) {
         self.type = type
+        let width = UIScreen.main.bounds.width
         switch type {
         case .identityCardNumber:
-            let width = UIScreen.main.bounds.width
             var margin: CGFloat = 0
             if DeviceHelper.isModernPhone {
                 margin += (44+31)
             }
             let frame = CGRect(origin: .zero, size: CGSize(width: width, height: 216+margin))
             super.init(frame: frame)
-            let identityNumberKeyboard = IdentityCardNumberKeyboard(frame: frame)
-            identityNumberKeyboard.delegate = self
-            add(keyboardView: identityNumberKeyboard)
+            let keyboard = IdentityCardNumberKeyboard(frame: frame)
+            keyboard.delegate = self
+            add(keyboardView: keyboard)
         case .vehicleIdentificationNumber:
-            fatalError()
+            var margin: CGFloat = 0
+            if DeviceHelper.isModernPhone {
+                margin += (44)
+            }
+            let frame = CGRect(origin: .zero, size: CGSize(width: width, height: 216+margin))
+            super.init(frame: frame)
+            let keyboard = VehicleIdentificationNumberKeyboard(frame: frame)
+//            keyboard.delegate = self
+            add(keyboardView: keyboard)
         }
     }
     
