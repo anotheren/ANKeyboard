@@ -20,77 +20,77 @@ final class IdentityCardNumberKeyboard: UIView {
     private(set) lazy var key_0: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "0"
-        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
+        view.addTarget(self, action: #selector(numberKeyTapped(_:)), for: .touchUpInside)
         return view
     }()
     
     private(set) lazy var key_1: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "1"
-        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
+        view.addTarget(self, action: #selector(numberKeyTapped(_:)), for: .touchUpInside)
         return view
     }()
     
     private(set) lazy var key_2: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "2"
-        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
+        view.addTarget(self, action: #selector(numberKeyTapped(_:)), for: .touchUpInside)
         return view
     }()
     
     private(set) lazy var key_3: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "3"
-        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
+        view.addTarget(self, action: #selector(numberKeyTapped(_:)), for: .touchUpInside)
         return view
     }()
     
     private(set) lazy var key_4: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "4"
-        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
+        view.addTarget(self, action: #selector(numberKeyTapped(_:)), for: .touchUpInside)
         return view
     }()
     
     private(set) lazy var key_5: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "5"
-        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
+        view.addTarget(self, action: #selector(numberKeyTapped(_:)), for: .touchUpInside)
         return view
     }()
     
     private(set) lazy var key_6: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "6"
-        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
+        view.addTarget(self, action: #selector(numberKeyTapped(_:)), for: .touchUpInside)
         return view
     }()
     
     private(set) lazy var key_7: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "7"
-        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
+        view.addTarget(self, action: #selector(numberKeyTapped(_:)), for: .touchUpInside)
         return view
     }()
     
     private(set) lazy var key_8: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "8"
-        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
+        view.addTarget(self, action: #selector(numberKeyTapped(_:)), for: .touchUpInside)
         return view
     }()
     
     private(set) lazy var key_9: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "9"
-        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
+        view.addTarget(self, action: #selector(numberKeyTapped(_:)), for: .touchUpInside)
         return view
     }()
     
     private(set) lazy var key_X: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "X"
-        view.addTarget(self, action: #selector(itemButtonTapped(_:)), for: .touchUpInside)
+        view.addTarget(self, action: #selector(numberKeyTapped(_:)), for: .touchUpInside)
         return view
     }()
     
@@ -124,10 +124,7 @@ final class IdentityCardNumberKeyboard: UIView {
         addSubview(key_9)
         addSubview(key_X)
         addSubview(key_DELETE)
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
+        
         let keyHeight: CGFloat = 46.5
         let keyMargin: CGFloat = 6
         let keySpacing: CGFloat = 7
@@ -208,7 +205,7 @@ final class IdentityCardNumberKeyboard: UIView {
         }
     }
     
-    @objc private func itemButtonTapped(_ sender: NumberKey) {
+    @objc private func numberKeyTapped(_ sender: NumberKey) {
         guard let key = sender.title else { return }
         SoundHelper.keyboardLetter()
         delegate?.keyboard(self, didEnter: key)

@@ -1,5 +1,5 @@
 //
-//  LetterKey.swift
+//  FunctionKey.swift
 //  ANKeyboard
 //
 //  Created by 刘栋 on 2019/5/21.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-final class LetterKey: UIControl {
+final class FunctionKey: UIControl {
     
     private var animator = UIViewPropertyAnimator()
     
     private lazy var titleLabel: UILabel = {
         let view = UILabel(frame: .zero)
-        view.font = UIFont.systemFont(ofSize: Adaptor.phone(15, 16, 17), weight: .regular)
+        view.font = UIFont.systemFont(ofSize: Adaptor.phone(14, 15, 16), weight: .regular)
         view.textColor = .normalTextColor
         view.textAlignment = .center
         return view
@@ -23,18 +23,6 @@ final class LetterKey: UIControl {
     var title: String? {
         didSet {
             titleLabel.text = title
-        }
-    }
-    
-    override var isEnabled: Bool {
-        didSet {
-            if isEnabled {
-                titleLabel.textColor = .normalTextColor
-                backgroundColor = .normalKeyColor
-            } else {
-                titleLabel.textColor = .disableTextColor
-                backgroundColor = .disableKeyColor
-            }
         }
     }
     
@@ -49,7 +37,7 @@ final class LetterKey: UIControl {
     }
     
     private func setupView() {
-        backgroundColor = .normalKeyColor
+        backgroundColor = .highlightedKeyColor
         addTarget(self, action: #selector(touchDown), for: [.touchDown, .touchDragEnter])
         addTarget(self, action: #selector(touchUp), for: [.touchUpInside, .touchDragExit, .touchCancel])
         addSubview(titleLabel)
@@ -61,12 +49,12 @@ final class LetterKey: UIControl {
     
     @objc private func touchDown() {
         animator.stopAnimation(true)
-        backgroundColor = .highlightedKeyColor
+        backgroundColor = .normalKeyColor
     }
     
     @objc private func touchUp() {
         animator = UIViewPropertyAnimator(duration: 0.25, curve: .easeOut, animations: {
-            self.backgroundColor = .normalKeyColor
+            self.backgroundColor = .highlightedKeyColor
         })
         animator.startAnimation()
     }

@@ -13,6 +13,7 @@ public protocol KeyboardDelegate: class {
     func keyboard(_ keyboard: Keyboard, didEnter key: String)
     func keyboardDidTapBackspace(_ keyboard: Keyboard)
     func keyboardDidTapPaste(_ keyboard: Keyboard)
+    func keyboardDidTapReturn(_ keyboard: Keyboard)
 }
 
 public extension KeyboardDelegate {
@@ -20,4 +21,5 @@ public extension KeyboardDelegate {
     func keyboard(_ keyboard: Keyboard, didEnter key: String) { }
     func keyboardDidTapBackspace(_ keyboard: Keyboard) { }
     func keyboardDidTapPaste(_ keyboard: Keyboard) { }
+    func keyboardDidTapReturn(_ keyboard: Keyboard) { }
 }

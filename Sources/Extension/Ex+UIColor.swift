@@ -22,7 +22,7 @@ extension UIColor {
     
     static let normalKeyColor = UIColor(hex: 0xFEFFFF)
     static let disableKeyColor = UIColor(hex: 0xF9F9F9)
-    static let highlightedKeyColor = UIColor(hex: 0xB6C2D0)
+    static let highlightedKeyColor = UIColor(hex: 0xCECECE)
     
     static let backgroundColor = UIColor(hex: 0xEAEAEA)
     static let shadowColor = UIColor(hex: 0x848688)

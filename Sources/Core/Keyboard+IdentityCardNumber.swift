@@ -1,12 +1,12 @@
 //
-//  Keyboard+IdentityNumber.swift
+//  Keyboard+IdentityCardNumber.swift
 //  ANKeyboard
 //
 //  Created by 刘栋 on 2019/4/13.
 //  Copyright © 2019 anotheren.com. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 private let identityCardNumberMaxLength = 18
 

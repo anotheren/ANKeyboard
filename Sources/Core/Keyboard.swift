@@ -44,7 +44,7 @@ public class Keyboard: UIView {
             let frame = CGRect(origin: .zero, size: CGSize(width: width, height: 216+margin))
             super.init(frame: frame)
             let keyboard = VehicleIdentificationNumberKeyboard(frame: frame)
-//            keyboard.delegate = self
+            keyboard.delegate = self
             add(keyboardView: keyboard)
         }
     }
