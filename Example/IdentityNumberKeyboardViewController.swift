@@ -16,7 +16,7 @@ class IdentityNumberKeyboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         identityNumberTextField.addTarget(self, action: #selector(editingChanged(_:)), for: .editingChanged)
-        let keyboard = Keyboard(type: .identityNumber)
+        let keyboard = Keyboard(type: .identityCardNumber)
         keyboard.bind(to: identityNumberTextField)
     }
     

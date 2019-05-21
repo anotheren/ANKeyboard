@@ -1,5 +1,5 @@
 //
-//  IdentityNumberKeyboard.swift
+//  IdentityCardNumberKeyboard.swift
 //  ANKeyboard
 //
 //  Created by 刘栋 on 2018/12/19.
@@ -9,15 +9,15 @@
 import UIKit
 import SnapKit
 
-protocol IdentityNumberKeyboardDelegate: class {
+protocol IdentityCardNumberKeyboardDelegate: class {
     
-    func keyboard(_ keyboard: IdentityNumberKeyboard, didEnter key: String)
-    func keyboardDidTapBackspace(_ keyboard: IdentityNumberKeyboard)
+    func keyboard(_ keyboard: IdentityCardNumberKeyboard, didEnter key: String)
+    func keyboardDidTapBackspace(_ keyboard: IdentityCardNumberKeyboard)
 }
 
-final class IdentityNumberKeyboard: UIView {
+final class IdentityCardNumberKeyboard: UIView {
     
-    private(set) lazy var zeroButton: NumberKey = {
+    private(set) lazy var key_0: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "0"
         view.tag = 0
@@ -25,7 +25,7 @@ final class IdentityNumberKeyboard: UIView {
         return view
     }()
     
-    private(set) lazy var oneButton: NumberKey = {
+    private(set) lazy var key_1: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "1"
         view.tag = 1
@@ -33,7 +33,7 @@ final class IdentityNumberKeyboard: UIView {
         return view
     }()
     
-    private(set) lazy var twoButton: NumberKey = {
+    private(set) lazy var key_2: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "2"
         view.tag = 2
@@ -41,7 +41,7 @@ final class IdentityNumberKeyboard: UIView {
         return view
     }()
     
-    private(set) lazy var threeButton: NumberKey = {
+    private(set) lazy var key_3: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "3"
         view.tag = 3
@@ -49,7 +49,7 @@ final class IdentityNumberKeyboard: UIView {
         return view
     }()
     
-    private(set) lazy var fourButton: NumberKey = {
+    private(set) lazy var key_4: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "4"
         view.tag = 4
@@ -57,7 +57,7 @@ final class IdentityNumberKeyboard: UIView {
         return view
     }()
     
-    private(set) lazy var fiveButton: NumberKey = {
+    private(set) lazy var key_5: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "5"
         view.tag = 5
@@ -65,7 +65,7 @@ final class IdentityNumberKeyboard: UIView {
         return view
     }()
     
-    private(set) lazy var sixButton: NumberKey = {
+    private(set) lazy var key_6: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "6"
         view.tag = 6
@@ -73,7 +73,7 @@ final class IdentityNumberKeyboard: UIView {
         return view
     }()
     
-    private(set) lazy var sevenButton: NumberKey = {
+    private(set) lazy var key_7: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "7"
         view.tag = 7
@@ -81,7 +81,7 @@ final class IdentityNumberKeyboard: UIView {
         return view
     }()
     
-    private(set) lazy var eightButton: NumberKey = {
+    private(set) lazy var key_8: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "8"
         view.tag = 8
@@ -89,7 +89,7 @@ final class IdentityNumberKeyboard: UIView {
         return view
     }()
     
-    private(set) lazy var nineButton: NumberKey = {
+    private(set) lazy var key_9: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "9"
         view.tag = 9
@@ -97,7 +97,7 @@ final class IdentityNumberKeyboard: UIView {
         return view
     }()
     
-    private(set) lazy var xButton: NumberKey = {
+    private(set) lazy var key_X: NumberKey = {
         let view = NumberKey(frame: .zero)
         view.title = "X"
         view.tag = 10
@@ -105,13 +105,13 @@ final class IdentityNumberKeyboard: UIView {
         return view
     }()
     
-    private(set) lazy var deleteButton: BackspaceKey = {
+    private(set) lazy var key_DELETE: BackspaceKey = {
         let view = BackspaceKey(frame: .zero)
         view.addTarget(self, action: #selector(backspaceKeyTapped(_:)), for: .touchUpInside)
         return view
     }()
     
-    weak var delegate: IdentityNumberKeyboardDelegate?
+    weak var delegate: IdentityCardNumberKeyboardDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -123,18 +123,18 @@ final class IdentityNumberKeyboard: UIView {
     }
     
     private func setupView() {
-        addSubview(zeroButton)
-        addSubview(oneButton)
-        addSubview(twoButton)
-        addSubview(threeButton)
-        addSubview(fourButton)
-        addSubview(fiveButton)
-        addSubview(sixButton)
-        addSubview(sevenButton)
-        addSubview(eightButton)
-        addSubview(nineButton)
-        addSubview(xButton)
-        addSubview(deleteButton)
+        addSubview(key_0)
+        addSubview(key_1)
+        addSubview(key_2)
+        addSubview(key_3)
+        addSubview(key_4)
+        addSubview(key_5)
+        addSubview(key_6)
+        addSubview(key_7)
+        addSubview(key_8)
+        addSubview(key_9)
+        addSubview(key_X)
+        addSubview(key_DELETE)
     }
     
     override func layoutSubviews() {
@@ -142,80 +142,80 @@ final class IdentityNumberKeyboard: UIView {
         let keyHeight: CGFloat = 46.5
         let keyMargin: CGFloat = 6
         let keySpacing: CGFloat = 7
-        oneButton.snp.makeConstraints { maker in
+        key_1.snp.makeConstraints { maker in
             maker.left.equalTo(snp.left).offset(keyMargin)
             maker.top.equalTo(snp.top).offset(keyMargin)
             maker.height.equalTo(keyHeight)
         }
-        twoButton.snp.makeConstraints { maker in
-            maker.left.equalTo(oneButton.snp.right).offset(keyMargin)
+        key_2.snp.makeConstraints { maker in
+            maker.left.equalTo(key_1.snp.right).offset(keyMargin)
             maker.top.equalTo(snp.top).offset(keyMargin)
             maker.height.equalTo(keyHeight)
-            maker.width.equalTo(oneButton.snp.width)
+            maker.width.equalTo(key_1.snp.width)
         }
-        threeButton.snp.makeConstraints { maker in
-            maker.left.equalTo(twoButton.snp.right).offset(keyMargin)
+        key_3.snp.makeConstraints { maker in
+            maker.left.equalTo(key_2.snp.right).offset(keyMargin)
             maker.top.equalTo(snp.top).offset(keyMargin)
             maker.height.equalTo(keyHeight)
-            maker.width.equalTo(oneButton.snp.width)
+            maker.width.equalTo(key_1.snp.width)
             maker.right.equalTo(snp.right).offset(-keyMargin)
         }
         
-        fourButton.snp.makeConstraints { maker in
+        key_4.snp.makeConstraints { maker in
             maker.left.equalTo(snp.left).offset(keyMargin)
-            maker.top.equalTo(oneButton.snp.bottom).offset(keySpacing)
+            maker.top.equalTo(key_1.snp.bottom).offset(keySpacing)
             maker.height.equalTo(keyHeight)
-            maker.width.equalTo(oneButton.snp.width)
+            maker.width.equalTo(key_1.snp.width)
         }
-        fiveButton.snp.makeConstraints { maker in
-            maker.left.equalTo(fourButton.snp.right).offset(keyMargin)
-            maker.top.equalTo(oneButton.snp.bottom).offset(keySpacing)
+        key_5.snp.makeConstraints { maker in
+            maker.left.equalTo(key_4.snp.right).offset(keyMargin)
+            maker.top.equalTo(key_1.snp.bottom).offset(keySpacing)
             maker.height.equalTo(keyHeight)
-            maker.width.equalTo(oneButton.snp.width)
+            maker.width.equalTo(key_1.snp.width)
         }
-        sixButton.snp.makeConstraints { maker in
-            maker.left.equalTo(fiveButton.snp.right).offset(keyMargin)
-            maker.top.equalTo(oneButton.snp.bottom).offset(keySpacing)
+        key_6.snp.makeConstraints { maker in
+            maker.left.equalTo(key_5.snp.right).offset(keyMargin)
+            maker.top.equalTo(key_1.snp.bottom).offset(keySpacing)
             maker.height.equalTo(keyHeight)
-            maker.width.equalTo(oneButton.snp.width)
+            maker.width.equalTo(key_1.snp.width)
         }
         
-        sevenButton.snp.makeConstraints { maker in
+        key_7.snp.makeConstraints { maker in
             maker.left.equalTo(snp.left).offset(keyMargin)
-            maker.top.equalTo(fourButton.snp.bottom).offset(keySpacing)
+            maker.top.equalTo(key_4.snp.bottom).offset(keySpacing)
             maker.height.equalTo(keyHeight)
-            maker.width.equalTo(oneButton.snp.width)
+            maker.width.equalTo(key_1.snp.width)
         }
-        eightButton.snp.makeConstraints { maker in
-            maker.left.equalTo(sevenButton.snp.right).offset(keyMargin)
-            maker.top.equalTo(fourButton.snp.bottom).offset(keySpacing)
+        key_8.snp.makeConstraints { maker in
+            maker.left.equalTo(key_7.snp.right).offset(keyMargin)
+            maker.top.equalTo(key_4.snp.bottom).offset(keySpacing)
             maker.height.equalTo(keyHeight)
-            maker.width.equalTo(oneButton.snp.width)
+            maker.width.equalTo(key_1.snp.width)
         }
-        nineButton.snp.makeConstraints { maker in
-            maker.left.equalTo(eightButton.snp.right).offset(keyMargin)
-            maker.top.equalTo(fourButton.snp.bottom).offset(keySpacing)
+        key_9.snp.makeConstraints { maker in
+            maker.left.equalTo(key_8.snp.right).offset(keyMargin)
+            maker.top.equalTo(key_4.snp.bottom).offset(keySpacing)
             maker.height.equalTo(keyHeight)
-            maker.width.equalTo(oneButton.snp.width)
+            maker.width.equalTo(key_1.snp.width)
         }
         
-        xButton.snp.makeConstraints { maker in
+        key_X.snp.makeConstraints { maker in
             maker.left.equalTo(snp.left).offset(keyMargin)
-            maker.top.equalTo(sevenButton.snp.bottom).offset(keySpacing)
+            maker.top.equalTo(key_7.snp.bottom).offset(keySpacing)
             maker.height.equalTo(keyHeight)
-            maker.width.equalTo(oneButton.snp.width)
+            maker.width.equalTo(key_1.snp.width)
         }
-        zeroButton.snp.makeConstraints { maker in
-            maker.left.equalTo(xButton.snp.right).offset(keyMargin)
-            maker.top.equalTo(sevenButton.snp.bottom).offset(keySpacing)
+        key_0.snp.makeConstraints { maker in
+            maker.left.equalTo(key_X.snp.right).offset(keyMargin)
+            maker.top.equalTo(key_7.snp.bottom).offset(keySpacing)
             maker.height.equalTo(keyHeight)
-            maker.width.equalTo(oneButton.snp.width)
+            maker.width.equalTo(key_1.snp.width)
         }
-        deleteButton.snp.makeConstraints { maker in
-            maker.left.equalTo(zeroButton.snp.right).offset(keyMargin)
-            maker.top.equalTo(sevenButton.snp.bottom).offset(keySpacing)
+        key_DELETE.snp.makeConstraints { maker in
+            maker.left.equalTo(key_0.snp.right).offset(keyMargin)
+            maker.top.equalTo(key_7.snp.bottom).offset(keySpacing)
             maker.height.equalTo(keyHeight)
-            maker.width.equalTo(oneButton.snp.width)
+            maker.width.equalTo(key_1.snp.width)
         }
     }
     

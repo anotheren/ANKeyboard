@@ -25,7 +25,7 @@ public class Keyboard: UIView {
     public init(type: KeyboardType) {
         self.type = type
         switch type {
-        case .identityNumber:
+        case .identityCardNumber:
             let width = UIScreen.main.bounds.width
             var margin: CGFloat = 0
             if DeviceHelper.isModernPhone {
@@ -33,9 +33,11 @@ public class Keyboard: UIView {
             }
             let frame = CGRect(origin: .zero, size: CGSize(width: width, height: 216+margin))
             super.init(frame: frame)
-            let identityNumberKeyboard = IdentityNumberKeyboard(frame: frame)
+            let identityNumberKeyboard = IdentityCardNumberKeyboard(frame: frame)
             identityNumberKeyboard.delegate = self
             add(keyboardView: identityNumberKeyboard)
+        case .vehicleIdentificationNumber:
+            fatalError()
         }
     }
     

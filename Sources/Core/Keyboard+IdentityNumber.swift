@@ -10,9 +10,9 @@ import Foundation
 
 fileprivate let identityNumberMaxLength = 18
 
-extension Keyboard: IdentityNumberKeyboardDelegate {
+extension Keyboard: IdentityCardNumberKeyboardDelegate {
     
-    func keyboard(_ keyboard: IdentityNumberKeyboard, didEnter key: String) {
+    func keyboard(_ keyboard: IdentityCardNumberKeyboard, didEnter key: String) {
         switch bindType {
         case .textFiled:
             if let text = textField?.text, text.count < identityNumberMaxLength {
@@ -27,7 +27,7 @@ extension Keyboard: IdentityNumberKeyboardDelegate {
         }
     }
     
-    func keyboardDidTapBackspace(_ keyboard: IdentityNumberKeyboard) {
+    func keyboardDidTapBackspace(_ keyboard: IdentityCardNumberKeyboard) {
         switch bindType {
         case .textFiled:
             if let text = textField?.text, !text.isEmpty {

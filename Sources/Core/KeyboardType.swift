@@ -11,5 +11,7 @@ import Foundation
 public enum KeyboardType {
     
     /// 中国身份证号
-    case identityNumber
+    case identityCardNumber
+    /// 车辆识别号码
+    case vehicleIdentificationNumber
 }
