@@ -17,19 +17,9 @@ protocol VehicleIdentificationNumberKeyboardDelegate: class {
     func keyboardDidTapReturn(_ keyboard: VehicleIdentificationNumberKeyboard)
 }
 
-final class VehicleIdentificationNumberKeyboard: UIView {
+final class VehicleIdentificationNumberKeyboard: BaseKeyboard {
     
     weak var delegate: VehicleIdentificationNumberKeyboardDelegate?
-    
-    override var tintColor: UIColor! {
-        didSet {
-            for view in subviews {
-                if view is ReturnKey {
-                    view.backgroundColor = tintColor
-                }
-            }
-        }
-    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,6 +28,14 @@ final class VehicleIdentificationNumberKeyboard: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func updateAppearance() {
+        for view in subviews {
+            if view is ReturnKey {
+                view.backgroundColor = tintColor
+            }
+        }
     }
 
     private func setupView() {

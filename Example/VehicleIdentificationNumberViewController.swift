@@ -17,6 +17,7 @@ class VehicleIdentificationNumberViewController: UIViewController {
         super.viewDidLoad()
         vehicleIdentificationNumberTextField.addTarget(self, action: #selector(editingChanged(_:)), for: .editingChanged)
         let keyboard = Keyboard(type: .vehicleIdentificationNumber)
+        keyboard.tintColor = .red
         keyboard.bind(to: vehicleIdentificationNumberTextField)
     }
     
