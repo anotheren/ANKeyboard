@@ -14,7 +14,7 @@ final class FunctionKey: UIControl {
     
     private lazy var titleLabel: UILabel = {
         let view = UILabel(frame: .zero)
-        view.font = UIFont.systemFont(ofSize: Adaptor.phone(14, 15, 16), weight: .regular)
+        view.font = UIFont.systemFont(ofSize: Adaptor.phoneWidth(14, 15, 16), weight: .regular)
         view.textColor = .normalTextColor
         view.textAlignment = .center
         return view

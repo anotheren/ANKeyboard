@@ -46,7 +46,7 @@ final class VehicleIdentificationNumberKeyboard: UIView {
         let leftRightMargin = 4
         let horizontalMargin = 10
         let verticalMargin = 5
-        let lineHeight = Adaptor.phone(36, 44, 48)
+        let lineHeight = Adaptor.phoneWidth(36, 44, 48)
         
         let line1 = UILayoutGuide()
         addLayoutGuide(line1)

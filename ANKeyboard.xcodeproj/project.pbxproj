@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A072DC3021CA9318003D36E8 /* KeyboardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072DC2F21CA9318003D36E8 /* KeyboardDelegate.swift */; };
-		A072DC3421CA9CEE003D36E8 /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072DC3321CA9CEE003D36E8 /* DeviceHelper.swift */; };
 		A09D7EF22293A61000DF3566 /* IdentityCardNumberKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7EF12293A61000DF3566 /* IdentityCardNumberKeyboard.swift */; };
 		A09D7EF42293AB7600DF3566 /* VehicleIdentificationNumberKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7EF32293AB7600DF3566 /* VehicleIdentificationNumberKeyboard.swift */; };
 		A09D7EF62293BDC500DF3566 /* LetterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7EF52293BDC500DF3566 /* LetterKey.swift */; };
@@ -64,7 +63,6 @@
 
 /* Begin PBXFileReference section */
 		A072DC2F21CA9318003D36E8 /* KeyboardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDelegate.swift; sourceTree = "<group>"; };
-		A072DC3321CA9CEE003D36E8 /* DeviceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
 		A09D7EF12293A61000DF3566 /* IdentityCardNumberKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentityCardNumberKeyboard.swift; sourceTree = "<group>"; };
 		A09D7EF32293AB7600DF3566 /* VehicleIdentificationNumberKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleIdentificationNumberKeyboard.swift; sourceTree = "<group>"; };
 		A09D7EF52293BDC500DF3566 /* LetterKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterKey.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 		A072DC3121CA9CCB003D36E8 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				A072DC3321CA9CEE003D36E8 /* DeviceHelper.swift */,
 				A0F1E21A21CB5A23000B8712 /* SoundHelper.swift */,
 				A09D7EF72293C54F00DF3566 /* Adaptor.swift */,
 			);
@@ -377,7 +374,6 @@
 				A0C1DAB721C3A3E9004E9627 /* KeyboardType.swift in Sources */,
 				A09D7EF82293C54F00DF3566 /* Adaptor.swift in Sources */,
 				A09D7EF62293BDC500DF3566 /* LetterKey.swift in Sources */,
-				A072DC3421CA9CEE003D36E8 /* DeviceHelper.swift in Sources */,
 				A0C1DAB921C3A46F004E9627 /* Keyboard.swift in Sources */,
 				A0B398042294027B0059E1EF /* ReturnKey.swift in Sources */,
 				A09D7EFC2293E87400DF3566 /* FunctionKey.swift in Sources */,

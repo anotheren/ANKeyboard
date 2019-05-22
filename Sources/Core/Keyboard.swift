@@ -27,7 +27,7 @@ public class Keyboard: UIView {
         let width = UIScreen.main.bounds.width
         switch type {
         case .identityCardNumber:
-            let height: CGFloat = 216 + (DeviceHelper.isModernPhone ? 44+31 : 0)
+            let height: CGFloat = 216 + Adaptor.modernPhone(44+31, 0)
             let frame = CGRect(origin: .zero, size: CGSize(width: width, height: height))
             super.init(frame: frame)
             let keyboard = IdentityCardNumberKeyboard(frame: frame)
@@ -35,7 +35,7 @@ public class Keyboard: UIView {
             keyboard.delegate = self
             add(keyboardView: keyboard)
         case .vehicleIdentificationNumber:
-            let height: CGFloat = Adaptor.phone(246, 278, 294) + (DeviceHelper.isModernPhone ? 34 : 0)
+            let height: CGFloat = Adaptor.phoneWidth(246, 278, 294) + Adaptor.modernPhone(34, 0)
             let frame = CGRect(origin: .zero, size: CGSize(width: width, height: height))
             super.init(frame: frame)
             let keyboard = VehicleIdentificationNumberKeyboard(frame: frame)

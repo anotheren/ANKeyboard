@@ -14,7 +14,7 @@ final class LetterKey: UIControl {
     
     private lazy var titleLabel: UILabel = {
         let view = UILabel(frame: .zero)
-        view.font = UIFont.systemFont(ofSize: Adaptor.phone(15, 16, 17), weight: .regular)
+        view.font = UIFont.systemFont(ofSize: Adaptor.phoneWidth(15, 16, 17), weight: .regular)
         view.textColor = .normalTextColor
         view.textAlignment = .center
         return view
