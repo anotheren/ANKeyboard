@@ -46,11 +46,11 @@ extension Keyboard: VehicleIdentificationNumberKeyboardDelegate {
         switch input {
         case let input as UITextField:
             if let text = UIPasteboard.general.string {
-                input.text = text
+                input.text = String(text.prefix(vehicleIdentificationNumberMaxLength))
             }
         case let input as UITextView:
             if let text = UIPasteboard.general.string {
-                input.text = text
+                input.text = String(text.prefix(vehicleIdentificationNumberMaxLength))
             }
         default:
             delegate?.keyboardDidTapPaste(self)
