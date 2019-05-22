@@ -13,31 +13,31 @@ private let identityCardNumberMaxLength = 18
 extension Keyboard: IdentityCardNumberKeyboardDelegate {
     
     func keyboard(_ keyboard: IdentityCardNumberKeyboard, didEnter key: String) {
-        switch bindType {
-        case .textFiled:
-            if let text = textField?.text, text.count < identityCardNumberMaxLength {
-                textField?.insertText(key)
+        switch input {
+        case let input as UITextField:
+            if let text = input.text, text.count < identityCardNumberMaxLength {
+                input.insertText(key)
             }
-        case .textView:
-            if let text = textView?.text, text.count < identityCardNumberMaxLength {
-                textView?.insertText(key)
+        case let input as UITextView:
+            if let text = input.text, text.count < identityCardNumberMaxLength {
+                input.insertText(key)
             }
-        case .none:
+        default:
             delegate?.keyboard(self, didEnter: key)
         }
     }
     
     func keyboardDidTapBackspace(_ keyboard: IdentityCardNumberKeyboard) {
-        switch bindType {
-        case .textFiled:
-            if let text = textField?.text, !text.isEmpty {
-                textField?.deleteBackward()
+        switch input {
+        case let input as UITextField:
+            if let text = input.text, !text.isEmpty {
+                input.deleteBackward()
             }
-        case .textView:
-            if let text = textView?.text, !text.isEmpty {
-                textView?.deleteBackward()
+        case let input as UITextView:
+            if let text = input.text, !text.isEmpty {
+                input.deleteBackward()
             }
-        case .none:
+        default:
             delegate?.keyboardDidTapBackspace(self)
         }
     }

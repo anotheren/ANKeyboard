@@ -13,62 +13,58 @@ private let vehicleIdentificationNumberMaxLength = 17
 extension Keyboard: VehicleIdentificationNumberKeyboardDelegate {
     
     func keyboard(_ keyboard: VehicleIdentificationNumberKeyboard, didEnter key: String) {
-        switch bindType {
-        case .textFiled:
-            if let text = textField?.text, text.count < vehicleIdentificationNumberMaxLength {
-                textField?.insertText(key)
+        switch input {
+        case let input as UITextField:
+            if let text = input.text, text.count < vehicleIdentificationNumberMaxLength {
+                input.insertText(key)
             }
-        case .textView:
-            if let text = textView?.text, text.count < vehicleIdentificationNumberMaxLength {
-                textView?.insertText(key)
+        case let input as UITextView:
+            if let text = input.text, text.count < vehicleIdentificationNumberMaxLength {
+                input.insertText(key)
             }
-        case .none:
+        default:
             delegate?.keyboard(self, didEnter: key)
         }
     }
     
     func keyboardDidTapBackspace(_ keyboard: VehicleIdentificationNumberKeyboard) {
-        switch bindType {
-        case .textFiled:
-            if let text = textField?.text, !text.isEmpty {
-                textField?.deleteBackward()
+        switch input {
+        case let input as UITextField:
+            if let text = input.text, !text.isEmpty {
+                input.deleteBackward()
             }
-        case .textView:
-            if let text = textView?.text, !text.isEmpty {
-                textView?.deleteBackward()
+        case let input as UITextView:
+            if let text = input.text, !text.isEmpty {
+                input.deleteBackward()
             }
-        case .none:
+        default:
             delegate?.keyboardDidTapBackspace(self)
         }
     }
     
     func keyboardDidTapPaste(_ keyboard: VehicleIdentificationNumberKeyboard) {
-        switch bindType {
-        case .textFiled:
+        switch input {
+        case let input as UITextField:
             if let text = UIPasteboard.general.string {
-                textField?.text = text
+                input.text = text
             }
-        case .textView:
+        case let input as UITextView:
             if let text = UIPasteboard.general.string {
-                textView?.text = text
+                input.text = text
             }
-        case .none:
+        default:
             delegate?.keyboardDidTapPaste(self)
         }
     }
     
     func keyboardDidTapReturn(_ keyboard: VehicleIdentificationNumberKeyboard) {
-        switch bindType {
-        case .textFiled:
-            if let textField = textField {
-                if textField.delegate?.textFieldShouldReturn?(textField) ?? true {
-                    textField.sendActions(for: .editingDidEndOnExit)
-                }
+        switch input {
+        case let input as UITextField:
+            if input.delegate?.textFieldShouldReturn?(input) ?? true {
+                input.sendActions(for: .editingDidEndOnExit)
             }
-        case .textView:
-            if let textView = textView {
-                textView.delegate?.textViewDidEndEditing?(textView)
-            }
+        case let input as UITextView:
+            input.delegate?.textViewDidEndEditing?(input)
         default:
             delegate?.keyboardDidTapReturn(self)
         }

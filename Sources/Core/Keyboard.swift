@@ -15,12 +15,16 @@ public class Keyboard: UIView {
     public let type: KeyboardType
     /// 键盘代理，并手动控制输入
     public weak var delegate: KeyboardDelegate?
-    /// 当前绑定类型
-    public private(set) var bindType: BindType = .none
-    /// 当前绑定的 UITextField
-    public private(set) weak var textField: UITextField?
-    /// 当前绑定的 UITextView
-    public private(set) weak var textView: UITextView?
+    /// 当前绑定的输入源
+    public private(set) weak var input: UITextInput?
+    
+    public var textField: UITextField? {
+        return input as? UITextField
+    }
+    
+    public var textView: UITextView? {
+        return input as? UITextView
+    }
     
     public init(type: KeyboardType) {
         self.type = type
@@ -60,35 +64,21 @@ public class Keyboard: UIView {
         backgroundColor = UIColor.backgroundColor
     }
     
-    /// 绑定一个 UITextField，并自动控制输入
-    public func bind(to textField: UITextField) {
-        bindType = .textFiled
-        textField.inputView = self
-        self.textField = textField
-        self.textView = nil
-    }
-    
-    /// 绑定一个 UITextView，并自动控制输入
-    public func bind(to textView: UITextView) {
-        bindType = .textView
-        textView.inputView = self
-        self.textView = textView
-        self.textField = nil
+    /// 绑定一个输入源
+    public func bind(to input: UITextInput) {
+        self.input = input
+        switch input {
+        case let input as UITextField:
+            input.inputView = self
+        case let input as UITextView:
+            input.inputView = self
+        default:
+            break
+        }
     }
     
     /// 移除所有绑定的输入源
     public func removeAllTextInput() {
-        bindType = .none
-        self.textField = nil
-        self.textView = nil
-    }
-}
-
-extension Keyboard {
-    
-    public enum BindType {
-        case none
-        case textFiled
-        case textView
+        input = nil
     }
 }
