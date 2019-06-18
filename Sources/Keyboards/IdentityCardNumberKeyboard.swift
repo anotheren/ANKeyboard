@@ -15,7 +15,7 @@ protocol IdentityCardNumberKeyboardDelegate: class {
     func keyboardDidTapBackspace(_ keyboard: IdentityCardNumberKeyboard)
 }
 
-final class IdentityCardNumberKeyboard: BaseKeyboard {
+final class IdentityCardNumberKeyboard: KeyboardView {
     
     private(set) lazy var key_0: NumberKey = {
         let view = NumberKey(frame: .zero)

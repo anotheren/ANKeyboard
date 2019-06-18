@@ -2,7 +2,7 @@ github "SnapKit/SnapKit"
 
 
 # How to update
-# carthage update --platform iOS --no-use-binaries
+# carthage update --platform iOS --no-use-binaries --cache-builds --new-resolver
 
 # How to install Carthage
 # brew install carthage

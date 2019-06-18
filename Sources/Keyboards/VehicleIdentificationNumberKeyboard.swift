@@ -17,7 +17,7 @@ protocol VehicleIdentificationNumberKeyboardDelegate: class {
     func keyboardDidTapReturn(_ keyboard: VehicleIdentificationNumberKeyboard)
 }
 
-final class VehicleIdentificationNumberKeyboard: BaseKeyboard {
+final class VehicleIdentificationNumberKeyboard: KeyboardView {
     
     weak var delegate: VehicleIdentificationNumberKeyboardDelegate?
     

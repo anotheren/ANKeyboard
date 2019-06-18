@@ -14,7 +14,7 @@
 		A09D7EF82293C54F00DF3566 /* Adaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7EF72293C54F00DF3566 /* Adaptor.swift */; };
 		A09D7EFA2293DA9800DF3566 /* VehicleIdentificationNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7EF92293DA9800DF3566 /* VehicleIdentificationNumberViewController.swift */; };
 		A09D7EFC2293E87400DF3566 /* FunctionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7EFB2293E87400DF3566 /* FunctionKey.swift */; };
-		A0A416D92294F56000C01E94 /* BaseKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A416D82294F56000C01E94 /* BaseKeyboard.swift */; };
+		A0A416D92294F56000C01E94 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A416D82294F56000C01E94 /* KeyboardView.swift */; };
 		A0B398002293EF360059E1EF /* Keyboard+VehicleIdentificationNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B397FF2293EF360059E1EF /* Keyboard+VehicleIdentificationNumber.swift */; };
 		A0B398042294027B0059E1EF /* ReturnKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B398032294027B0059E1EF /* ReturnKey.swift */; };
 		A0C1DAB021C3A308004E9627 /* ANKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = A0C1DAAE21C3A308004E9627 /* ANKeyboard.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -70,7 +70,7 @@
 		A09D7EF72293C54F00DF3566 /* Adaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adaptor.swift; sourceTree = "<group>"; };
 		A09D7EF92293DA9800DF3566 /* VehicleIdentificationNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleIdentificationNumberViewController.swift; sourceTree = "<group>"; };
 		A09D7EFB2293E87400DF3566 /* FunctionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionKey.swift; sourceTree = "<group>"; };
-		A0A416D82294F56000C01E94 /* BaseKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseKeyboard.swift; sourceTree = "<group>"; };
+		A0A416D82294F56000C01E94 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		A0B397FF2293EF360059E1EF /* Keyboard+VehicleIdentificationNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+VehicleIdentificationNumber.swift"; sourceTree = "<group>"; };
 		A0B398032294027B0059E1EF /* ReturnKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnKey.swift; sourceTree = "<group>"; };
 		A0C1DAAB21C3A308004E9627 /* ANKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ANKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,9 +199,9 @@
 		A0F1E21521CB349D000B8712 /* Keyboards */ = {
 			isa = PBXGroup;
 			children = (
+				A0A416D82294F56000C01E94 /* KeyboardView.swift */,
 				A09D7EF12293A61000DF3566 /* IdentityCardNumberKeyboard.swift */,
 				A09D7EF32293AB7600DF3566 /* VehicleIdentificationNumberKeyboard.swift */,
-				A0A416D82294F56000C01E94 /* BaseKeyboard.swift */,
 			);
 			path = Keyboards;
 			sourceTree = "<group>";
@@ -375,7 +375,7 @@
 				A0C1DABB21C3A4F4004E9627 /* NumberKey.swift in Sources */,
 				A0B398002293EF360059E1EF /* Keyboard+VehicleIdentificationNumber.swift in Sources */,
 				A0C1DAB721C3A3E9004E9627 /* KeyboardType.swift in Sources */,
-				A0A416D92294F56000C01E94 /* BaseKeyboard.swift in Sources */,
+				A0A416D92294F56000C01E94 /* KeyboardView.swift in Sources */,
 				A09D7EF82293C54F00DF3566 /* Adaptor.swift in Sources */,
 				A09D7EF62293BDC500DF3566 /* LetterKey.swift in Sources */,
 				A0C1DAB921C3A46F004E9627 /* Keyboard.swift in Sources */,

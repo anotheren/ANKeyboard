@@ -14,7 +14,7 @@ public class Keyboard: UIView {
     /// 键盘类型
     public let type: KeyboardType
     /// 内置键盘
-    private let _keyboard: BaseKeyboard
+    private let _keyboardView: KeyboardView
     /// 键盘代理，并手动控制输入
     public weak var delegate: KeyboardDelegate?
     /// 当前绑定的输入源
@@ -31,7 +31,7 @@ public class Keyboard: UIView {
     public override var tintColor: UIColor! {
         didSet {
             guard tintColor != oldValue else { return }
-            _keyboard.tintColor = tintColor
+            _keyboardView.tintColor = tintColor
         }
     }
     
@@ -43,24 +43,23 @@ public class Keyboard: UIView {
             let height: CGFloat = 216 + Adaptor.modernPhone(44+31, 0)
             let frame = CGRect(origin: .zero, size: CGSize(width: width, height: height))
             let keyboard = IdentityCardNumberKeyboard(frame: frame)
-            _keyboard = keyboard
+            _keyboardView = keyboard
             super.init(frame: frame)
             keyboard.delegate = self
-            keyboard.tintColor = tintColor
             add(keyboardView: keyboard)
         case .vehicleIdentificationNumber:
             let height: CGFloat = Adaptor.phoneWidth(246, 278, 294) + Adaptor.modernPhone(34, 0)
             let frame = CGRect(origin: .zero, size: CGSize(width: width, height: height))
             let keyboard = VehicleIdentificationNumberKeyboard(frame: frame)
-            _keyboard = keyboard
+            _keyboardView = keyboard
             super.init(frame: frame)
-            keyboard.tintColor = tintColor
             keyboard.delegate = self
             add(keyboardView: keyboard)
         }
     }
     
-    private func add(keyboardView: UIView) {
+    private func add(keyboardView: KeyboardView) {
+        keyboardView.tintColor = tintColor
         addSubview(keyboardView)
         keyboardView.snp.makeConstraints { maker in
             maker.edges.equalTo(snp.edges)

@@ -62,9 +62,11 @@ extension Keyboard: VehicleIdentificationNumberKeyboardDelegate {
         case let input as UITextField:
             if input.delegate?.textFieldShouldReturn?(input) ?? true {
                 input.sendActions(for: .editingDidEndOnExit)
+                input.resignFirstResponder()
             }
         case let input as UITextView:
             input.delegate?.textViewDidEndEditing?(input)
+            input.resignFirstResponder()
         default:
             delegate?.keyboardDidTapReturn(self)
         }

@@ -1,5 +1,5 @@
 //
-//  BaseKeyboard.swift
+//  KeyboardView.swift
 //  ANKeyboard
 //
 //  Created by 刘栋 on 2019/5/22.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseKeyboard: UIView {
+class KeyboardView: UIView {
     
     override var tintColor: UIColor! {
         didSet {
