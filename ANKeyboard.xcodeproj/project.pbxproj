@@ -63,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A068AB0623698FA700C6D765 /* ANKeyboard.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ANKeyboard.podspec; sourceTree = "<group>"; };
 		A072DC2F21CA9318003D36E8 /* KeyboardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDelegate.swift; sourceTree = "<group>"; };
 		A09D7EF12293A61000DF3566 /* IdentityCardNumberKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentityCardNumberKeyboard.swift; sourceTree = "<group>"; };
 		A09D7EF32293AB7600DF3566 /* VehicleIdentificationNumberKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleIdentificationNumberKeyboard.swift; sourceTree = "<group>"; };
@@ -151,8 +152,8 @@
 				A0C1DABD21C3A544004E9627 /* LICENSE */,
 				A0C1DABC21C3A544004E9627 /* README.md */,
 				A0C1DAC021C487C7004E9627 /* Cartfile */,
+				A068AB0623698FA700C6D765 /* ANKeyboard.podspec */,
 				A0C1DAAD21C3A308004E9627 /* Sources */,
-				A068AB0523698F5000C6D765 /* Resources */,
 				A0F1E1EF21CA6497000B8712 /* Example */,
 				A0C1DAAC21C3A308004E9627 /* Products */,
 				A0C1DAC121C48BCC004E9627 /* Frameworks */,
@@ -178,6 +179,7 @@
 				A0F1E21621CB34A8000B8712 /* Keys */,
 				A072DC3221CA9CD2003D36E8 /* Extension */,
 				A072DC3121CA9CCB003D36E8 /* Util */,
+				A068AB0523698F5000C6D765 /* Resources */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -583,6 +585,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anotheren.ANKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -617,6 +620,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anotheren.ANKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -643,6 +647,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anotheren.ANKeyboard.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -667,6 +672,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anotheren.ANKeyboard.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
