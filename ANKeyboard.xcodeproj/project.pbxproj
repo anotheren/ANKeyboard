@@ -119,6 +119,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A068AB0523698F5000C6D765 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A0F1E21121CB2AAD000B8712 /* Keyboard.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		A072DC3121CA9CCB003D36E8 /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +152,7 @@
 				A0C1DABC21C3A544004E9627 /* README.md */,
 				A0C1DAC021C487C7004E9627 /* Cartfile */,
 				A0C1DAAD21C3A308004E9627 /* Sources */,
+				A068AB0523698F5000C6D765 /* Resources */,
 				A0F1E1EF21CA6497000B8712 /* Example */,
 				A0C1DAAC21C3A308004E9627 /* Products */,
 				A0C1DAC121C48BCC004E9627 /* Frameworks */,
@@ -169,7 +178,6 @@
 				A0F1E21621CB34A8000B8712 /* Keys */,
 				A072DC3221CA9CD2003D36E8 /* Extension */,
 				A072DC3121CA9CCB003D36E8 /* Util */,
-				A0F1E21121CB2AAD000B8712 /* Keyboard.xcassets */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
